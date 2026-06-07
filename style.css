@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    max-width: 700px;
+    width: 100%;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #999;
+    font-size: 1em;
+}
+
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.1);
+}
+
+.search-btn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.search-btn:active {
+    transform: translateY(0);
+}
+
+.error-message {
+    display: none;
+    color: #e74c3c;
+    background: #fadbd8;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.error-message.show {
+    display: block;
+}
+
+.weather-container {
+    display: none;
+}
+
+.weather-container.show {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.weather-main {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.location-info h2 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.location-info p {
+    opacity: 0.9;
+    font-size: 0.95em;
+}
+
+.weather-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.temperature {
+    font-size: 3.5em;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.weather-condition {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.weather-condition p {
+    font-size: 1.1em;
+    text-transform: capitalize;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.detail-box {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid #e0e0e0;
+}
+
+.detail-box:hover {
+    background: #e8f0ff;
+    border-color: #667eea;
+    transform: translateY(-3px);
+}
+
+.detail-label {
+    color: #666;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .weather-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .weather-display {
+        justify-content: center;
+    }
+
+    .temperature {
+        font-size: 2.5em;
+    }
+
+    .weather-details {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search-section {
+        flex-direction: column;
+    }
+}
