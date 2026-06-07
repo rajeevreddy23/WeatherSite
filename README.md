@@ -67,30 +67,6 @@ WeatherSite/
 ## Browser Compatibility
 
 Works on:
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
+- Chrome
+- Safari
 - Mobile browsers
-
-## Tips
-
-- Search for city names (e.g., "London", "Tokyo", "Berlin")
-- Include country codes for more specific results (e.g., "Paris, France")
-- The app automatically detects and uses your local timezone
-- Weather icons use emoji symbols for better visual representation
-
-## Example Searches
-
-- New York
-- London
-- Tokyo
-- Sydney
-- Toronto
-- Moscow
-- Dubai
-- Singapore
-- Bangkok
-- Barcelona
-
-Enjoy checking the weather! 🌤️
